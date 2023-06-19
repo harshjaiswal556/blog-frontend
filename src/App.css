@@ -12,12 +12,13 @@ img{
 }
 main{
     padding: 10px;
-    max-width: 960px;
+    max-width: 1080px;
     margin: 0 auto;
 }
 header{
     display:flex;
     justify-content:space-between;
+    flex-wrap: wrap;
     margin-top: 20px;
     margin-bottom: 50px;
     align-items: center;
@@ -70,6 +71,9 @@ div.post p.summary{
     margin:10px 0;
     line-height: 1.8rem;
 }
+div.post div.image{
+    margin-right: 20px;
+}
 
 form.login, form.register{
     max-width: 400px;
@@ -98,8 +102,10 @@ form.login h1, form.register h1{
     text-align: center;
 }
 
+
 div.post-page div.image{
-    max-height:300px;
+    /* max-height:300px; */
+    min-width: 100%;
     display: flex;
     overflow:hidden;
 }
@@ -114,9 +120,9 @@ div.post-page a{
 }
 div.post-page h1{
     text-align: center;
-    margin: 10px 0 5px;
+    margin: 50px 0px 5px 0px;
 }
-div.post-page time{
+div.post-page time{ 
     text-align: center;
     display: block;
     font-size:1rem;
@@ -129,16 +135,17 @@ div.post-page div.author{
     font-size: .7rem;
     font-weight: bold;
 }
-div.content p{
+div.content{
     line-height: 1.7rem;
-    margin: 30px 0;
+    margin: 30px 0px 75px 0px; 
 }
-div.content li{
+/* div.content li{
     margin-bottom: 10px;
-}
+} */
 div.edit-row{
     text-align: center;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 div.post-page a.edit-btn{
     background-color: #333;

@@ -24,14 +24,14 @@ export default function PostPage() {
             </div>
             <h1>{postInfo.title}</h1>
             <time>{format(new Date(postInfo.createdAt), 'MMM d, yyyy HH:mm')}</time>
-            <div className="author">by {postInfo.author.username}</div>
+            <div className="author">~ {postInfo.author.username}</div>
+            <div className="content" dangerouslySetInnerHTML={{ __html: postInfo.content }} />
             {userInfo.id === postInfo.author._id && (
                 <div className="edit-row">
                     {/* <a className="edit-btn" href={`/edit/${postInfo._id}`}>Edit this post</a> */}
                     <Link className="edit-btn" to={`/edit/${postInfo._id}`}> Edit this post </Link>
                 </div>
             )}
-            <div className="content" dangerouslySetInnerHTML={{ __html: postInfo.content }} />
         </div>
     )
 }

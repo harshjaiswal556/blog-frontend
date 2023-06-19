@@ -18,6 +18,8 @@ export default function EditPost() {
                 setTitle(postInfo.title);
                 setContent(postInfo.content);
                 setSummary(postInfo.summary);
+                setFiles(postInfo.cover);
+                console.log(postInfo.cover)
             })
         })
     }, [])
@@ -29,9 +31,11 @@ export default function EditPost() {
         data.set('summary', summary);
         data.set('content', content);
         data.set('id', id);
-        if (files?.[0]) {
-            data.set('file', files?.[0]);
-        }
+        data.set('file', files);
+        console.log(files);
+        // console.log(files?.[0]);
+        // if (files?.[0]) {
+        // }
         const response = await fetch('http://localhost:4000/post', {
             method: 'PUT',
             body: data,

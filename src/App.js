@@ -1,6 +1,8 @@
 import './App.css';
 import Layout from './components/Layout';
 import { Route, Routes } from "react-router-dom";
+//importing components
+
 import IndexPage from './pages/IndexPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/ResgisterPage';
@@ -8,8 +10,13 @@ import { UserContextProvider } from './UserContext';
 import CreatePost from './pages/CreatePost';
 import PostPage from './pages/PostPage';
 import EditPost from './pages/EditPost';
+
+
 function App() {
   return (
+
+    //using routes to link all the pages
+
     <UserContextProvider>
       <Routes>
         <Route path="/" element={<Layout />}>

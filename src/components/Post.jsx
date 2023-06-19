@@ -1,6 +1,9 @@
 import { format } from "date-fns"
 import { Link } from "react-router-dom"
+
+//Passing all the parameters of post which PostSchema have in API
 export default function Post({ _id, title, summary, cover, content, createdAt, author }) {
+
   return (
     <div className="post">
       <div className="image">
