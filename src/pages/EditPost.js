@@ -31,8 +31,9 @@ export default function EditPost() {
         data.set('summary', summary);
         data.set('content', content);
         data.set('id', id);
-        data.set('file', files);
-        console.log(files);
+        data.set('file', files[0]);
+        console.log("response");
+        // console.log(files);
         // console.log(files?.[0]);
         // if (files?.[0]) {
         // }
@@ -41,6 +42,8 @@ export default function EditPost() {
             body: data,
             credentials: 'include'
         })
+        console.log(response.ok);
+        console.log("response");
         if (response.ok) {
             setRedirect(true)
         }

@@ -10,6 +10,7 @@ export default function PostPage() {
     useEffect(() => {
         fetch(`http://localhost:4000/post/${id}`).then(response => {
             response.json().then(postInfo => {
+                console.log(userInfo)
                 setPostInfo(postInfo);
             })
         })

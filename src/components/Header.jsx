@@ -37,6 +37,7 @@ export default function Header() {
             <nav>
                 {/* If user name is not null  */}
                 {username && (<>
+                    <Link to="/mypost">My Post</Link>
                     <Link to="/create">Create New Post</Link>
                     <a onClick={logout}>Logout</a>
                 </>)}
