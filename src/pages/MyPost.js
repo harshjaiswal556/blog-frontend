@@ -11,6 +11,7 @@ export default function MyPost() {
     const [posts, setPosts] = useState([]);
     const { userInfo } = useContext(UserContext)
 
+    // console.log(posts[0].author._id);
     //UseEffect function to get the post request from API
     useEffect(() => {
         fetch('http://localhost:4000/post').then(response => {
