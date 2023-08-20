@@ -1,10 +1,12 @@
 import { useContext } from "react";
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../UserContext";
 
 export default function Header() {
     const { setUserInfo, userInfo } = useContext(UserContext);
+    const navigate = useNavigate();
+
 
     //UseEffect to call backend API to check whether the user is logged in
     useEffect(() => {
@@ -24,6 +26,8 @@ export default function Header() {
             method: 'POST',
         })
         setUserInfo(null); //If user is logged out then set user info to null
+        navigate('/');
+        // window.location.reload();
     }
 
     //Username to check if user is not logged in then it will be null value

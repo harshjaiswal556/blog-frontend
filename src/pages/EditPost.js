@@ -11,6 +11,7 @@ export default function EditPost() {
     const [content, setContent] = useState('');
     const [files, setFiles] = useState('');
     const [redirect, setRedirect] = useState('');
+    const [isEdited, setIsEdited] = useState(true);
     // const [cover, setCover] = useState('');
     useEffect(() => {
         fetch("http://localhost:4000/post/" + id).then(response => {
@@ -32,6 +33,7 @@ export default function EditPost() {
         data.set('content', content);
         data.set('id', id);
         data.set('file', files[0]);
+        data.set('isEdited', true);
         console.log("response");
         // console.log(files);
         // console.log(files?.[0]);
