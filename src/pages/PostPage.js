@@ -26,7 +26,7 @@ export default function PostPage() {
             <h1>{postInfo.title}</h1>
             <time>{format(new Date(postInfo.createdAt), 'MMM d, yyyy HH:mm')}</time>
             <div className="author">~ {postInfo.author.username}</div>
-            <div className="edited">{postInfo.isEdited === true ? "Edited" : null}</div>
+            <div className="edited">{postInfo.isEdited === true ? "Edited - " : null}</div>
             <div className="content" dangerouslySetInnerHTML={{ __html: postInfo.content }} />
             {userInfo.id === postInfo.author._id && (
                 <div className="edit-row">
