@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ReactQuill from "react-quill";
+// import ReactQuill from "react-quill";
 import { Navigate, useParams } from "react-router-dom";
 import Editor from "../components/Editor";
 
@@ -11,7 +11,7 @@ export default function EditPost() {
     const [content, setContent] = useState('');
     const [files, setFiles] = useState('');
     const [redirect, setRedirect] = useState('');
-    const [isEdited, setIsEdited] = useState(true);
+    // const [isEdited, setIsEdited] = useState(true);
     // const [cover, setCover] = useState('');
     useEffect(() => {
         fetch("http://localhost:4000/post/" + id).then(response => {
@@ -20,6 +20,7 @@ export default function EditPost() {
                 setContent(postInfo.content);
                 setSummary(postInfo.summary);
                 setFiles(postInfo.cover);
+
                 console.log(postInfo.cover)
             })
         })
