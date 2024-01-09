@@ -8,7 +8,7 @@ export default function PostPage() {
     const { userInfo } = useContext(UserContext)
     const { id } = useParams();
     useEffect(() => {
-        fetch(`http://ec2-15-207-247-163.ap-south-1.compute.amazonaws.com:4000/post/${id}`).then(response => {
+        fetch(`http://ec2-13-200-152-133.ap-south-1.compute.amazonaws.com:4000/post/${id}`).then(response => {
             response.json().then(postInfo => {
                 console.log(userInfo)
                 setPostInfo(postInfo);
@@ -21,7 +21,7 @@ export default function PostPage() {
     return (
         <div className="post-page">
             <div className="image">
-                <img src={`http://ec2-15-207-247-163.ap-south-1.compute.amazonaws.com:4000/${postInfo.cover}`} alt="Retry later" />
+                <img src={`http://ec2-13-200-152-133.ap-south-1.compute.amazonaws.com:4000/${postInfo.cover}`} alt="Retry later" />
             </div>
             <h1>{postInfo.title}</h1>
             <time>{format(new Date(postInfo.createdAt), 'MMM d, yyyy HH:mm')}</time>

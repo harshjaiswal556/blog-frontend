@@ -8,7 +8,7 @@ export default function Post({ _id, title, summary, cover, content, createdAt, a
     <div className="post">
       <div className="image">
         <Link to={`/post/${_id}`}>
-          <img src={'http://ec2-15-207-247-163.ap-south-1.compute.amazonaws.com:4000/' + cover} alt="" />
+          <img src={'http://ec2-13-200-152-133.ap-south-1.compute.amazonaws.com:4000/' + cover} alt="" />
         </Link>
       </div>
       <div className="texts">

@@ -10,7 +10,7 @@ export default function Header() {
 
     //UseEffect to call backend API to check whether the user is logged in
     useEffect(() => {
-        fetch("http://ec2-15-207-247-163.ap-south-1.compute.amazonaws.com:4000/profile", {
+        fetch("http://ec2-13-200-152-133.ap-south-1.compute.amazonaws.com:4000/profile", {
             credentials: 'include',
         }).then(response => {
             response.json().then(userInfo => {
@@ -21,7 +21,7 @@ export default function Header() {
 
     //Logout function to post a request to log the user out
     function logout() {
-        fetch("http://ec2-15-207-247-163.ap-south-1.compute.amazonaws.com:4000/logout", {
+        fetch("http://ec2-13-200-152-133.ap-south-1.compute.amazonaws.com:4000/logout", {
             credentials: 'include',
             method: 'POST',
         })
