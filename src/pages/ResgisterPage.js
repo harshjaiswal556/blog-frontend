@@ -6,7 +6,7 @@ export default function RegisterPage() {
     const [email, setEmail] = useState('');
     async function register(e) {
         e.preventDefault();
-        const response = await fetch('http://localhost:4000/register', {
+        const response = await fetch('http://ec2-15-207-247-163.ap-south-1.compute.amazonaws.com:4000/register', {
             method: 'POST',
             body: JSON.stringify({ username, password, email }),
             headers: { 'Content-Type': 'application/json' }

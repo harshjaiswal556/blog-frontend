@@ -8,7 +8,7 @@ export default function IndexPage() {
 
     //UseEffect function to get the post request from API
     useEffect(() => {
-        fetch('http://localhost:4000/post').then(response => {
+        fetch('http://ec2-15-207-247-163.ap-south-1.compute.amazonaws.com:4000/post').then(response => {
             response.json().then(posts => {
                 setPosts(posts);
             })
